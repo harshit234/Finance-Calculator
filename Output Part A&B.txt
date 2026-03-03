@@ -1,0 +1,69 @@
+Part A-
+
+PS C:\Users\abcom\Desktop\finance clac> python .\Finance_Calculator.py
+============================================
+EMPLOYEE FINANCIAL SUMMARY GENERATOR
+============================================
+Employee Name: Satyam Kumar
+Annual Salary: 1200000
+Tax % (0-50): 30
+Monthly Rent: 15000
+Savings % (0-100): 40
+
+============================================
+EMPLOYEE FINANCIAL SUMMARY
+============================================
+Employee : Satyam Kumar
+Annual Salary : Rs. 12,00,000.00
+--------------------------------------------
+Monthly Breakdown:
+Gross Salary : Rs. 1,00,000.00
+Tax (30.0%) : Rs. 30,000.00
+Net Salary : Rs. 70,000.00
+Rent : Rs. 15,000.00 (21.4% of net)
+Savings (40.0%) : Rs. 28,000.00
+Disposable : Rs. 27,000.00
+--------------------------------------------
+Annual Projection:
+Total Tax : Rs. 3,60,000.00
+Total Savings : Rs. 3,36,000.00
+Total Rent : Rs. 1,80,000.00
+--------------------------------------------
+
+
+
+
+Part B-
+
+
+PS C:\Users\abcom\Desktop\finance clac> python .\Finance_Calculator_B.py
+============================================
+TWO EMPLOYEE FINANCE COMPARISON TOOL
+============================================
+Employee 1 Name: Harshit Gautam
+
+Enter details for Harshit Gautam
+Annual Salary: 1200000
+Tax % (0-50): 30
+Monthly Rent: 25000
+Savings % (0-100): 30
+
+Employee 2 Name: Satyam Kumar
+
+Enter details for Satyam Kumar
+Annual Salary: 1500000
+Tax % (0-50): 30
+Monthly Rent: 24000
+Savings % (0-100): 30
+
+======================================================================
+EMPLOYEE FINANCIAL COMPARISON
+======================================================================
+Metric              Harshit Gautam           Satyam Kumar
+----------------------------------------------------------------------
+Net Salary          Rs. 70,000.00            Rs. 87,500.00
+Rent Ratio %        35.7                     27.4
+Savings %           30.0                     30.0
+Disposable          Rs. 24,000.00            Rs. 37,250.00
+Health Score        80.0                     90.0
+======================================================================
