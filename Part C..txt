@@ -1,0 +1,70 @@
+PS C:\Users\abcom\Desktop\finance clac> python
+Python 3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print(type(True))
+<class 'bool'>
+>>> print(isinstance(True, int))
+True
+>>> print(True + True + False)
+2
+>>> print(int(3.99))
+3
+>>> print(bool("False"))
+True
+>>> print(bool(""))
+False
+>>> print(0.1 + 0.2 == 0.3)
+False
+>>> print("5" + "3")
+53
+>>> print(5 + 3)
+8
+>>> 
+>>> def analyze_value(value):
+...     """Analyze any Python value."""
+...
+...     value_type = type(value).__name__
+...     truthiness = bool(value)
+...
+...     try:
+...         length = len(value)
+...     except TypeError:
+...         length = "N/A"
+...
+...     return (
+...         f"Value: {value} | "
+...         f"Type: {value_type} | "
+...         f"Truthy: {truthiness} | "
+...         f"Length: {length}"
+...     )
+...
+>>>
+>>> print(analyze_value(42))
+... print(analyze_value(""))
+... print(analyze_value([1, 2, 3]))
+...
+Value: 42 | Type: int | Truthy: True | Length: N/A
+Value:  | Type: str | Truthy: False | Length: 0
+Value: [1, 2, 3] | Type: list | Truthy: True | Length: 3
+
+>>> name = input("Name: ")
+... age = int(input("Age: "))
+...
+... if age >= 18:
+...     status = "Adult"
+... else:
+...     status = "Minor"
+...
+... print(f"{name} is {age} years old and is a {status}")
+...
+... print(f"In 5 years: {age + 5}")
+...
+... score = 85.5
+... print(f"Score: {score:.0f}")
+...
+Name: Harshit
+Age: 25
+Harshit is 25 years old and is a Adult
+In 5 years: 30
+Score: 86
+>>>

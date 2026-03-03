@@ -1,0 +1,82 @@
+Prompt-
+
+"Generate a Python type conversion matrix showing what happens when you convert between int, float, str, bool, list, and tuple. Include valid conversions, invalid conversions, edge cases, and potential errors such as ValueError and TypeError."
+
+
+Test in Python 
+
+>>> int(3.5)
+3
+>>> int("5")
+5
+>>> int("3.5")
+Traceback (most recent call last):
+  File "<python-input-18>", line 1, in <module>
+    int("3.5")
+    ~~~^^^^^^^
+ValueError: invalid literal for int() with base 10: '3.5'
+>>> int(True)
+1
+>>> int(False)
+0
+>>> int([1,2])
+Traceback (most recent call last):
+  File "<python-input-21>", line 1, in <module>
+    int([1,2])
+    ~~~^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+>>>
+>>> float(5)
+5.0
+>>> float("3.14")
+3.14
+>>> float("abc")
+Traceback (most recent call last):
+  File "<python-input-25>", line 1, in <module>
+    float("abc")
+    ~~~~~^^^^^^^
+ValueError: could not convert string to float: 'abc'
+>>> float(True)
+1.0
+>>> float([1)]
+  File "<python-input-27>", line 1
+    float([1)]
+            ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+>>> float([1])
+Traceback (most recent call last):
+  File "<python-input-28>", line 1, in <module>
+    float([1])
+    ~~~~~^^^^^
+TypeError: float() argument must be a string or a real number, not 'list'
+>>> str(5)
+'5'
+>>> str(3.5)
+'3.5'
+>>> str(True)
+'True'
+>>> str([1,2])
+'[1, 2]'
+>>>
+>>> bool(0)
+False
+>>> bool(1)
+True
+>>> bool("")
+False
+>>> bool("False")
+True
+>>> bool([])
+False
+>>> bool([1])
+True
+>>>
+
+
+Q -Write a critical evaluation (150-200 words): How accurate was the AI? Did it miss any edge cases? What would you add?
+
+Ans - I prompted the AI to generate a Python type conversion matrix between int, float, str, bool, list, and tuple including edge cases and potential errors. The AI correctly identified most valid conversions such as int("5"), float(3), bool(0), list((1,2)), and tuple([1,2]). It also correctly mentioned ValueError when converting invalid strings like int("abc").
+
+However, the AI missed some important edge cases. It did not clearly explain that int("3.5") raises a ValueError even though it looks numeric. It also did not emphasize that bool("False") returns True because any non-empty string is truthy in Python. Additionally, it failed to explain floating-point precision limitations such as 0.1 + 0.2 not equaling 0.3 exactly.
+
+The AI response was around 85% accurate. It covered standard conversions well but lacked deeper explanation of Python’s truthiness rules and binary floating-point representation. I improved the matrix by manually testing every conversion and adding missing error cases.
